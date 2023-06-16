@@ -28,3 +28,15 @@ export const createNewEmployee = async(req, res)=>{
         salary
     });
 }
+
+export const deleteEmployeeByID = async(req, res)=>{
+
+    const [rows] = await pool.query("DELETE FROM employees WHERE id = ?", [req.params.id]);
+
+    if(rows.affectedRows === 0){
+        return res.status(404).json({ message: `Employee does not exists` });
+    }
+
+    res.json({ message: `Employee deleted successfully` });
+
+}
