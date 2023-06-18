@@ -1,13 +1,5 @@
-import express  from 'express';
-import { getEmployees } from './routes/employees/employees.routes.js';
-import './config.js';
+import app from './app.js';
+import { APP_PORT } from './config.js';
 
-const app = express();
-
-app.listen(3000);
-
-app.use(express.json());
-
-app.use('/api',getEmployees);
-
-app.use((req, res)=>res.status(404).json({message:"Route not found"}));
+app.listen(APP_PORT);
+console.log('Server running on port', APP_PORT);

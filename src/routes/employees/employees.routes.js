@@ -8,4 +8,6 @@ export const getEmployee = router.get("/employees/:id", getEmployeeById);
 export const createEmployee = router.post("/employees", createNewEmployee);
 export const updateEmployee = router.patch("/employees/:id", updateEmployeeById);
 export const deleteEmployee = router.delete("/employees/:id", deleteEmployeeByID);
+
+export default router;
  
