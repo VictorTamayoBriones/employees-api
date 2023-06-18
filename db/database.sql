@@ -17,4 +17,4 @@ INSERT INTO employees(name, salary) VALUES
 
 
 
-DESC employee;
+DESC employees;

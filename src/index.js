@@ -1,5 +1,6 @@
 import express  from 'express';
 import { getEmployees } from './routes/employees/employees.routes.js';
+import './config.js';
 
 const app = express();
 
